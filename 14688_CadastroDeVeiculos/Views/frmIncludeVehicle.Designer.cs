@@ -175,7 +175,7 @@
             this.txtModelo.MaxLength = 40;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(183, 20);
-            this.txtModelo.TabIndex = 18;
+            this.txtModelo.TabIndex = 1;
             // 
             // cboFabricante
             // 
@@ -186,7 +186,7 @@
             this.cboFabricante.Name = "cboFabricante";
             this.cboFabricante.Size = new System.Drawing.Size(183, 21);
             this.cboFabricante.Sorted = true;
-            this.cboFabricante.TabIndex = 19;
+            this.cboFabricante.TabIndex = 2;
             this.cboFabricante.Text = "Selecione o Fabricante";
             this.cboFabricante.SelectedIndexChanged += new System.EventHandler(this.cboFabricante_SelectedIndexChanged);
             // 
@@ -203,7 +203,7 @@
             this.cboTipo.Location = new System.Drawing.Point(112, 59);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(183, 21);
-            this.cboTipo.TabIndex = 21;
+            this.cboTipo.TabIndex = 3;
             this.cboTipo.Text = "Selecione o Tipo/Categoria";
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
@@ -215,7 +215,7 @@
             this.cboCombustivel.Location = new System.Drawing.Point(112, 86);
             this.cboCombustivel.Name = "cboCombustivel";
             this.cboCombustivel.Size = new System.Drawing.Size(183, 21);
-            this.cboCombustivel.TabIndex = 22;
+            this.cboCombustivel.TabIndex = 4;
             this.cboCombustivel.Text = "Selecione o Combustivel";
             this.cboCombustivel.SelectedIndexChanged += new System.EventHandler(this.cboCombustivel_SelectedIndexChanged);
             // 
@@ -225,8 +225,9 @@
             this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(100, 20);
-            this.txtAno.TabIndex = 23;
+            this.txtAno.TabIndex = 5;
             this.txtAno.Text = "Exemplo: 2022";
+            this.txtAno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAno_KeyPress);
             // 
             // txtCor
             // 
@@ -234,7 +235,7 @@
             this.txtCor.MaxLength = 30;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(100, 20);
-            this.txtCor.TabIndex = 24;
+            this.txtCor.TabIndex = 6;
             this.txtCor.Text = "Exemplo: Azul";
             // 
             // txtChassi
@@ -243,7 +244,7 @@
             this.txtChassi.MaxLength = 17;
             this.txtChassi.Name = "txtChassi";
             this.txtChassi.Size = new System.Drawing.Size(183, 20);
-            this.txtChassi.TabIndex = 25;
+            this.txtChassi.TabIndex = 7;
             // 
             // txtKm
             // 
@@ -251,8 +252,10 @@
             this.txtKm.MaxLength = 14;
             this.txtKm.Name = "txtKm";
             this.txtKm.Size = new System.Drawing.Size(100, 20);
-            this.txtKm.TabIndex = 26;
+            this.txtKm.TabIndex = 8;
             this.txtKm.Text = "Somente Números";
+            this.txtKm.TextChanged += new System.EventHandler(this.txtKm_TextChanged);
+            this.txtKm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKm_KeyPress);
             // 
             // txtObs
             // 
@@ -261,7 +264,7 @@
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(233, 129);
-            this.txtObs.TabIndex = 27;
+            this.txtObs.TabIndex = 9;
             // 
             // chkRevisao
             // 
@@ -269,7 +272,7 @@
             this.chkRevisao.Location = new System.Drawing.Point(372, 160);
             this.chkRevisao.Name = "chkRevisao";
             this.chkRevisao.Size = new System.Drawing.Size(65, 17);
-            this.chkRevisao.TabIndex = 28;
+            this.chkRevisao.TabIndex = 10;
             this.chkRevisao.Text = "Revisão";
             this.chkRevisao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkRevisao.UseVisualStyleBackColor = true;
@@ -280,7 +283,7 @@
             this.chkSinistro.Location = new System.Drawing.Point(372, 183);
             this.chkSinistro.Name = "chkSinistro";
             this.chkSinistro.Size = new System.Drawing.Size(60, 17);
-            this.chkSinistro.TabIndex = 29;
+            this.chkSinistro.TabIndex = 11;
             this.chkSinistro.Text = "Sinistro";
             this.chkSinistro.UseVisualStyleBackColor = true;
             // 
@@ -290,7 +293,7 @@
             this.chkRouboFurto.Location = new System.Drawing.Point(438, 183);
             this.chkRouboFurto.Name = "chkRouboFurto";
             this.chkRouboFurto.Size = new System.Drawing.Size(100, 17);
-            this.chkRouboFurto.TabIndex = 30;
+            this.chkRouboFurto.TabIndex = 12;
             this.chkRouboFurto.Text = "Roubo ou Furto";
             this.chkRouboFurto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkRouboFurto.UseVisualStyleBackColor = true;
@@ -301,7 +304,7 @@
             this.chkAluguel.Location = new System.Drawing.Point(372, 206);
             this.chkAluguel.Name = "chkAluguel";
             this.chkAluguel.Size = new System.Drawing.Size(61, 17);
-            this.chkAluguel.TabIndex = 31;
+            this.chkAluguel.TabIndex = 13;
             this.chkAluguel.Text = "Aluguel";
             this.chkAluguel.UseVisualStyleBackColor = true;
             // 
@@ -311,7 +314,7 @@
             this.chkVenda.Location = new System.Drawing.Point(438, 206);
             this.chkVenda.Name = "chkVenda";
             this.chkVenda.Size = new System.Drawing.Size(57, 17);
-            this.chkVenda.TabIndex = 32;
+            this.chkVenda.TabIndex = 14;
             this.chkVenda.Text = "Venda";
             this.chkVenda.UseVisualStyleBackColor = true;
             // 
@@ -321,7 +324,7 @@
             this.chkParticular.Location = new System.Drawing.Point(501, 206);
             this.chkParticular.Name = "chkParticular";
             this.chkParticular.Size = new System.Drawing.Size(70, 17);
-            this.chkParticular.TabIndex = 33;
+            this.chkParticular.TabIndex = 15;
             this.chkParticular.Text = "Particular";
             this.chkParticular.UseVisualStyleBackColor = true;
             // 
@@ -330,7 +333,7 @@
             this.btnClose.Location = new System.Drawing.Point(530, 467);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 35;
+            this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Fechar";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -340,7 +343,7 @@
             this.btnincludeVechicle.Location = new System.Drawing.Point(10, 255);
             this.btnincludeVechicle.Name = "btnincludeVechicle";
             this.btnincludeVechicle.Size = new System.Drawing.Size(85, 23);
-            this.btnincludeVechicle.TabIndex = 34;
+            this.btnincludeVechicle.TabIndex = 16;
             this.btnincludeVechicle.Text = "Incluir Veiculo";
             this.btnincludeVechicle.UseVisualStyleBackColor = true;
             this.btnincludeVechicle.Click += new System.EventHandler(this.btnincludeVechicle_Click);
@@ -350,7 +353,7 @@
             this.btnCancel.Location = new System.Drawing.Point(306, 467);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 23);
-            this.btnCancel.TabIndex = 36;
+            this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Cancelar / Limpar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -360,7 +363,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(101, 255);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(85, 23);
-            this.btnUpdate.TabIndex = 37;
+            this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Alterar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -370,7 +373,7 @@
             this.btnDelete.Location = new System.Drawing.Point(418, 467);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 23);
-            this.btnDelete.TabIndex = 38;
+            this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Excluir";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -405,7 +408,7 @@
             this.txtSearch.Location = new System.Drawing.Point(282, 257);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(232, 20);
-            this.txtSearch.TabIndex = 44;
+            this.txtSearch.TabIndex = 18;
             // 
             // btnSearch
             // 
@@ -413,7 +416,7 @@
             this.btnSearch.Location = new System.Drawing.Point(520, 250);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(85, 33);
-            this.btnSearch.TabIndex = 43;
+            this.btnSearch.TabIndex = 19;
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);

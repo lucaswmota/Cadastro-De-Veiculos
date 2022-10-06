@@ -91,7 +91,7 @@ namespace _14688_CadastroDeVeiculos.Models
                 Banco.Command = new MySqlCommand("Use carshop; " +
                     "delete c from combustiveis c " +
                     "left join veiculos v on v.idCombustivel = c.id " +
-                    "where v.idCombustivel is null; ", Banco.Connection);
+                    "where v.idCombustivel is null and c.id=@id; ", Banco.Connection);
                 Banco.Command.Parameters.AddWithValue("@id", id);
                 
                 Banco.Command.ExecuteNonQuery();
