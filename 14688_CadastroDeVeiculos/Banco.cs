@@ -84,6 +84,12 @@ namespace _14688_CadastroDeVeiculos
                     "Descricao varchar(20));", Connection);
                 Command.ExecuteNonQuery();
 
+                Command = new MySqlCommand("create table if not exists usuarios " +
+                    "(id integer auto_increment primary key, " +
+                    "usuario varchar(20)," +
+                    "senha varchar(8), " +
+                    "sessao boolean);");
+
             }
             catch(Exception e)
             {
